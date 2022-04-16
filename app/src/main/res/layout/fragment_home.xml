@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context=".pages.home.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_status_bar"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <RelativeLayout
+            android:id="@+id/home_ll_toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/home_tv_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/actionBarItemBackground"
+                android:contentDescription="@string/home_ib_text_search"
+                android:padding="16dp"
+                app:srcCompat="@drawable/ic_search" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_cl_broad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/shape_cl_home_broad"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/home_tv_title_today_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_tv_text_today_progress"
+            android:textColor="#6A6A6A"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/home_tv_content_today_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="2 / 3"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="@id/home_tv_title_today_progress"
+            app:layout_constraintTop_toBottomOf="@id/home_tv_title_today_progress"
+            android:layout_marginTop="6dp"/>
+
+        <com.sulv9.talktodo.widget.CircleProgressBar
+            android:id="@+id/home_cpb_broad_today_progress"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/home_tv_title_week_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/home_tv_text_week_progress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/home_tv_content_week_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="2/3"
+            app:layout_constraintBottom_toBottomOf="@id/home_tv_title_week_progress"
+            app:layout_constraintStart_toEndOf="@id/home_tv_title_week_progress"
+            app:layout_constraintTop_toTopOf="@id/home_tv_title_week_progress" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/main_nav_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/talk_todo_nav" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/main_bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_app_bar_height"
+        android:layout_gravity="bottom"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:elevation="0dp"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="@dimen/bottom_app_bar_fab_cradle_margin"
+        app:fabCradleRoundedCornerRadius="@dimen/bottom_app_bar_fab_cradle_corner_radius"
+        app:hideOnScroll="true">
+
+        <LinearLayout
+            android:id="@+id/main_ll_bottom_bar_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/main_ib_home"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_app_bar_logo_size"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="@string/main_ib_home_content_description"
+                android:src="@drawable/ic_home_selected" />
+
+            <ImageButton
+                android:id="@+id/main_ib_statics"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_app_bar_logo_size"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="@string/main_ib_statics_content_description"
+                android:src="@drawable/ic_statics_normal" />
+
+        </LinearLayout>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green_400"
+        app:tint="@color/white"
+        android:contentDescription="@string/main_fab_content_description"
+        app:layout_anchor="@id/main_bottom_app_bar"
+        app:srcCompat="@drawable/ic_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="top_bar_height">72dp</dimen>
+
+    <!--BottomAppBar-->
+    <dimen name="bottom_app_bar_height">72dp</dimen>
+    <dimen name="bottom_app_bar_fab_cradle_corner_radius">32dp</dimen>
+    <dimen name="bottom_app_bar_fab_cradle_margin">8dp</dimen>
+    <dimen name="bottom_app_bar_logo_size">32dp</dimen>
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sulv9.talktodo.pages.home.HomeFragment"
+        android:label="@string/main_nav_label_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_todoGroupDetail"
+            app:destination="@id/todoGroupDetailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/newTodoGroupFragment"
+        android:name="com.sulv9.talktodo.pages.newgroup.NewTodoGroupFragment"
+        android:label="@string/main_nav_label_new_todo_group"
+        tools:layout="@layout/fragment_new_todo_group" />
+
+    <fragment
+        android:id="@+id/staticsFragment"
+        android:name="com.sulv9.talktodo.pages.statics.StaticsFragment"
+        android:label="@string/main_nav_label_statics"
+        tools:layout="@layout/fragment_statics"/>
+
+    <fragment
+        android:id="@+id/todoGroupDetailFragment"
+        android:name="com.sulv9.talktodo.pages.groupdetail.TodoGroupDetailFragment"
+        android:label="@string/main_nav_label_todo_group_detail"
+        tools:layout="@layout/fragment_todo_group_detail">
+
+        <argument
+            android:name="groupId"
+            app:argType="long" />
+
+    </fragment>
+
+</navigation>
