@@ -5,6 +5,7 @@
     <string name="main_nav_label_new_todo_group">新建待办组</string>
     <string name="main_nav_label_statics">统计界面</string>
     <string name="main_nav_label_todo_group_detail">待办组详情界面</string>
+    <string name="main_nav_label_search">搜索界面</string>
 
     <string name="main_fab_content_description">新建待办组</string>
     <string name="main_ib_home_content_description">主界面</string>
@@ -13,4 +14,8 @@
     <string name="home_ib_text_search">搜索历史待办</string>
     <string name="home_tv_text_today_progress">今日待办完成进度</string>
     <string name="home_tv_text_week_progress">本周待办完成进度:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="group_detail_transition_name_nsv">TodoGroupDetailNestedScrollView</string>
+    <string name="new_todo_group_btn_send_content_description">发送</string>
 </resources>

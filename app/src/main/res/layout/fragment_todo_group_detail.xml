@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_detail_nsv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:transitionName="@string/group_detail_transition_name_nsv"
     tools:context=".pages.groupdetail.TodoGroupDetailFragment">
 
+    <EditText
+        android:id="@+id/group_detail_et_group_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/group_detail_ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+
+</LinearLayout>

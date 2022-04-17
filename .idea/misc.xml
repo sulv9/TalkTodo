@@ -6,15 +6,28 @@
         <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1515" />
         <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/ic_home_selected.xml" value="0.1125" />
         <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1515" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/ic_new_left.xml" value="0.1205" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/ic_new_right.xml" value="0.1205" />
         <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/ic_search.xml" value="0.1125" />
         <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/ic_statics_selected.xml" value="0.1125" />
         <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/ic_text.xml" value="0.1515" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/selector_ib_new_todo_group_send.xml" value="0.1205" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/shape_bg_chat.xml" value="0.1205" />
         <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/shape_cl_home_broad.xml" value="0.1125" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/shape_item_rv_home.xml" value="0.1205" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/drawable/shape_new_left_avatar.xml" value="0.1205" />
         <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/activity_main.xml" value="0.16" />
-        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/fragment_home.xml" value="0.2" />
-        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/fragment_new_todo_group.xml" value="0.115625" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/fragment_home.xml" value="0.16" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/fragment_new_todo_group.xml" value="0.16799999999999998" />
         <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/fragment_statics.xml" value="0.115625" />
-        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/fragment_todo_group_detail.xml" value="0.23143115942028986" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/fragment_todo_group_detail.xml" value="0.2" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/item_group_detail_todo.xml" value="0.2" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/item_rv_home.xml" value="0.2586050724637681" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/item_rv_home_group.xml" value="0.12588652482269502" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/item_rv_home_todo.xml" value="0.2586050724637681" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/item_rv_new_left_ask.xml" value="0.2" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/item_rv_new_left_choose.xml" value="0.2586050724637681" />
+        <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/layout/item_rv_new_right_ask.xml" value="0.2" />
         <entry key="..\:/Android/KotlinProject/TalkTodo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1515" />
       </map>
     </option>

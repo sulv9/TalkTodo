@@ -1,60 +1,86 @@
 package com.sulv9.talktodo.pages.newgroup
 
+import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
+import androidx.transition.Slide
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.transition.MaterialContainerTransform
 import com.sulv9.talktodo.R
+import com.sulv9.talktodo.base.BaseFragment
+import com.sulv9.talktodo.data.model.GroupWithTodos
+import com.sulv9.talktodo.data.model.Todo
+import com.sulv9.talktodo.data.model.TodoGroup
+import com.sulv9.talktodo.databinding.FragmentNewTodoGroupBinding
+import com.sulv9.talktodo.util.AppContainer
+import com.sulv9.talktodo.util.themeColor
+import com.sulv9.talktodo.util.toDatetime
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class NewTodoGroupFragment : BaseFragment<FragmentNewTodoGroupBinding>() {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [NewTodoGroupFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class NewTodoGroupFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private val args: NewTodoGroupFragmentArgs by navArgs()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    override fun initBinding(
+        layoutInflater: LayoutInflater,
+        container: ViewGroup?
+    ) = FragmentNewTodoGroupBinding.inflate(layoutInflater, container, false)
+
+    private val viewModel: NewGroupViewModel by viewModels {
+        AppContainer().getNewTodoGroupViewModelFactory()
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        initAnim()
+        initListener()
+        initObserve()
+    }
+
+    private fun initListener() {
+        binding.newTodoGroupIbSend.setOnClickListener {
+            viewModel.addNewGroupWithTodos(
+                TodoGroup(title = "AAAAA"),
+                listOf(
+                    Todo(
+                        title = "BBBBB",
+                        deadTime = System.currentTimeMillis().toDatetime()
+                    ),
+                    Todo(
+                        title = "CCCCC",
+                        deadTime = System.currentTimeMillis().toDatetime()
+                    ),
+                )
+            )
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_new_todo_group, container, false)
+    private fun initAnim() {
+        binding.run {
+            enterTransition = MaterialContainerTransform().apply {
+                startView = requireActivity().findViewById(R.id.main_fab_add_new_todo_group)
+                endView = binding.fragNewGroupLl
+                duration = resources.getInteger(R.integer.motion_duration_large).toLong()
+                scrimColor = Color.TRANSPARENT
+                containerColor =
+                    requireContext().themeColor(com.google.android.material.R.attr.colorSurface)
+                startContainerColor =
+                    requireContext().themeColor(com.google.android.material.R.attr.colorSecondary)
+                endContainerColor =
+                    requireContext().themeColor(com.google.android.material.R.attr.colorSurface)
+            }
+            returnTransition = Slide().apply {
+                duration = resources.getInteger(R.integer.motion_duration_large).toLong()
+                addTarget(R.id.frag_new_group_ll)
+            }
+        }
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment NewTodoGroupFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            NewTodoGroupFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun initObserve() {
+
     }
+
 }
