@@ -52,7 +52,7 @@ class TodoGroupDetailFragment : BaseFragment<FragmentTodoGroupDetailBinding>() {
         binding.groupDetailEtGroupTitle.run {
             setText(viewModel.group.value?.title)
             doOnTextChanged { text, start, before, count ->
-                viewModel.updateGroup(text as String)
+//                viewModel.updateGroup(text as String)
             }
         }
         val container = binding.groupDetailLlContainer
@@ -72,7 +72,7 @@ class TodoGroupDetailFragment : BaseFragment<FragmentTodoGroupDetailBinding>() {
                             )
                         )
                         doOnTextChanged { text, start, before, count ->
-                            viewModel.updateTodo(todo.id, text as String, todo.isAchieved)
+//                            viewModel.updateTodo(todo.id, text as String, todo.isAchieved)
                         }
                     }
                     container.addView(it)
